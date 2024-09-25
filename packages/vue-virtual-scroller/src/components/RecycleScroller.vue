@@ -678,6 +678,7 @@ export default {
           }
         : false)
       this.listenerTarget.addEventListener('resize', this.handleResize)
+      this.listenerTarget.addEventListener('scrollend', this.handleResize)
     },
 
     removeListeners () {
@@ -687,6 +688,7 @@ export default {
 
       this.listenerTarget.removeEventListener('scroll', this.handleScroll)
       this.listenerTarget.removeEventListener('resize', this.handleResize)
+      this.listenerTarget.removeEventListener('scrollend', this.handleResize)
 
       this.listenerTarget = null
     },
